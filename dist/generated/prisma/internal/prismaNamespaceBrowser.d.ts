@@ -1,0 +1,214 @@
+import * as runtime from "@prisma/client/runtime/index-browser";
+export type * from '../models.js';
+export type * from './prismaNamespace.js';
+export declare const Decimal: typeof runtime.Decimal;
+export declare const NullTypes: {
+    DbNull: (new (secret: never) => typeof runtime.DbNull);
+    JsonNull: (new (secret: never) => typeof runtime.JsonNull);
+    AnyNull: (new (secret: never) => typeof runtime.AnyNull);
+};
+export declare const DbNull: import("@prisma/client-runtime-utils").DbNullClass;
+export declare const JsonNull: import("@prisma/client-runtime-utils").JsonNullClass;
+export declare const AnyNull: import("@prisma/client-runtime-utils").AnyNullClass;
+export declare const ModelName: {
+    readonly User: "User";
+    readonly Teacher: "Teacher";
+    readonly Student: "Student";
+    readonly Course: "Course";
+    readonly Room: "Room";
+    readonly Group: "Group";
+    readonly StudentGroup: "StudentGroup";
+    readonly Lesson: "Lesson";
+    readonly Attendance: "Attendance";
+    readonly Homework: "Homework";
+    readonly LessonVideo: "LessonVideo";
+    readonly HomeworkResponse: "HomeworkResponse";
+    readonly HomeworkResult: "HomeworkResult";
+    readonly Rating: "Rating";
+};
+export type ModelName = (typeof ModelName)[keyof typeof ModelName];
+export declare const TransactionIsolationLevel: {
+    readonly ReadUncommitted: "ReadUncommitted";
+    readonly ReadCommitted: "ReadCommitted";
+    readonly RepeatableRead: "RepeatableRead";
+    readonly Serializable: "Serializable";
+};
+export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel];
+export declare const UserScalarFieldEnum: {
+    readonly id: "id";
+    readonly fullName: "fullName";
+    readonly contact: "contact";
+    readonly photo: "photo";
+    readonly password: "password";
+    readonly position: "position";
+    readonly hire_date: "hire_date";
+    readonly role: "role";
+    readonly address: "address";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum];
+export declare const TeacherScalarFieldEnum: {
+    readonly id: "id";
+    readonly fullName: "fullName";
+    readonly contact: "contact";
+    readonly photo: "photo";
+    readonly password: "password";
+    readonly position: "position";
+    readonly exprience: "exprience";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type TeacherScalarFieldEnum = (typeof TeacherScalarFieldEnum)[keyof typeof TeacherScalarFieldEnum];
+export declare const StudentScalarFieldEnum: {
+    readonly id: "id";
+    readonly fullName: "fullName";
+    readonly contact: "contact";
+    readonly photo: "photo";
+    readonly password: "password";
+    readonly birth_date: "birth_date";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type StudentScalarFieldEnum = (typeof StudentScalarFieldEnum)[keyof typeof StudentScalarFieldEnum];
+export declare const CourseScalarFieldEnum: {
+    readonly id: "id";
+    readonly name: "name";
+    readonly description: "description";
+    readonly status: "status";
+    readonly durationMonth: "durationMonth";
+    readonly durationLesson: "durationLesson";
+    readonly level: "level";
+    readonly price: "price";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type CourseScalarFieldEnum = (typeof CourseScalarFieldEnum)[keyof typeof CourseScalarFieldEnum];
+export declare const RoomScalarFieldEnum: {
+    readonly id: "id";
+    readonly name: "name";
+    readonly capacity: "capacity";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type RoomScalarFieldEnum = (typeof RoomScalarFieldEnum)[keyof typeof RoomScalarFieldEnum];
+export declare const GroupScalarFieldEnum: {
+    readonly id: "id";
+    readonly teacherId: "teacherId";
+    readonly userId: "userId";
+    readonly roomId: "roomId";
+    readonly courseId: "courseId";
+    readonly name: "name";
+    readonly capacity: "capacity";
+    readonly startDate: "startDate";
+    readonly startTime: "startTime";
+    readonly weekDays: "weekDays";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type GroupScalarFieldEnum = (typeof GroupScalarFieldEnum)[keyof typeof GroupScalarFieldEnum];
+export declare const StudentGroupScalarFieldEnum: {
+    readonly id: "id";
+    readonly groupId: "groupId";
+    readonly studentId: "studentId";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type StudentGroupScalarFieldEnum = (typeof StudentGroupScalarFieldEnum)[keyof typeof StudentGroupScalarFieldEnum];
+export declare const LessonScalarFieldEnum: {
+    readonly id: "id";
+    readonly groupId: "groupId";
+    readonly userId: "userId";
+    readonly teacherId: "teacherId";
+    readonly title: "title";
+    readonly lessonStart: "lessonStart";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type LessonScalarFieldEnum = (typeof LessonScalarFieldEnum)[keyof typeof LessonScalarFieldEnum];
+export declare const AttendanceScalarFieldEnum: {
+    readonly id: "id";
+    readonly lessonId: "lessonId";
+    readonly teacherId: "teacherId";
+    readonly userId: "userId";
+    readonly studentId: "studentId";
+    readonly isPresent: "isPresent";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type AttendanceScalarFieldEnum = (typeof AttendanceScalarFieldEnum)[keyof typeof AttendanceScalarFieldEnum];
+export declare const HomeworkScalarFieldEnum: {
+    readonly id: "id";
+    readonly lessonId: "lessonId";
+    readonly teacherId: "teacherId";
+    readonly userId: "userId";
+    readonly title: "title";
+    readonly file: "file";
+    readonly durationTime: "durationTime";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type HomeworkScalarFieldEnum = (typeof HomeworkScalarFieldEnum)[keyof typeof HomeworkScalarFieldEnum];
+export declare const LessonVideoScalarFieldEnum: {
+    readonly id: "id";
+    readonly lessonId: "lessonId";
+    readonly teacherId: "teacherId";
+    readonly userId: "userId";
+    readonly file: "file";
+    readonly created_at: "created_at";
+};
+export type LessonVideoScalarFieldEnum = (typeof LessonVideoScalarFieldEnum)[keyof typeof LessonVideoScalarFieldEnum];
+export declare const HomeworkResponseScalarFieldEnum: {
+    readonly id: "id";
+    readonly homeworkId: "homeworkId";
+    readonly studentId: "studentId";
+    readonly title: "title";
+    readonly file: "file";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type HomeworkResponseScalarFieldEnum = (typeof HomeworkResponseScalarFieldEnum)[keyof typeof HomeworkResponseScalarFieldEnum];
+export declare const HomeworkResultScalarFieldEnum: {
+    readonly id: "id";
+    readonly homeworkId: "homeworkId";
+    readonly studentId: "studentId";
+    readonly teacherId: "teacherId";
+    readonly userId: "userId";
+    readonly title: "title";
+    readonly file: "file";
+    readonly score: "score";
+    readonly status: "status";
+    readonly created_at: "created_at";
+    readonly updated_at: "updated_at";
+};
+export type HomeworkResultScalarFieldEnum = (typeof HomeworkResultScalarFieldEnum)[keyof typeof HomeworkResultScalarFieldEnum];
+export declare const RatingScalarFieldEnum: {
+    readonly id: "id";
+    readonly teacherId: "teacherId";
+    readonly lessonId: "lessonId";
+    readonly score: "score";
+    readonly created_at: "created_at";
+};
+export type RatingScalarFieldEnum = (typeof RatingScalarFieldEnum)[keyof typeof RatingScalarFieldEnum];
+export declare const SortOrder: {
+    readonly asc: "asc";
+    readonly desc: "desc";
+};
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
+export declare const QueryMode: {
+    readonly default: "default";
+    readonly insensitive: "insensitive";
+};
+export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode];
+export declare const NullsOrder: {
+    readonly first: "first";
+    readonly last: "last";
+};
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder];
